@@ -20,6 +20,7 @@ services:
         volumes:
             - '.:/var/www/html'
             - './../poc-legos:/var/www/poc-legos'
+            - './../torque:/var/www/torque'
         networks:
             - sail
         depends_on:

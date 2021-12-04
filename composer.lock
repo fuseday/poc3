@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "59bdfa45dbf78c439cea1b1ebcfa70e3",
+    "content-hash": "001e8b35ad458f21723b429d97ebe5a1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -676,11 +676,11 @@
         },
         {
             "name": "fuseday/poc3-hello-world",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./../poc-legos/poc3-hello-world",
-                "reference": "e35d1c4d412cc5866791d3a9cad2db768a4a8f12"
+                "reference": "b13dea2e0cb42beb57912345f0f367faadc20264"
             },
             "require": {
                 "php": "^8.1"
@@ -710,8 +710,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./packages/torque",
-                "reference": "580cd22ed4a01a864433e2fa368c1c620e5f4c03"
+                "url": "./../torque",
+                "reference": "7c5966cd25f83396d2bce3babe17543fd1b7697f"
             },
             "require": {
                 "illuminate/support": "^8.0",
@@ -772,37 +772,6 @@
                 "torque",
                 "vue"
             ],
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "fuseday/weld",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "./../poc-legos/weld",
-                "reference": "35cfc9a8d7f825bed30a19d8475713320f8f90a8"
-            },
-            "require": {
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^6.23"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Fuseday\\Weld\\WeldServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Fuseday\\Weld\\": "src/"
-                }
-            },
             "transport-options": {
                 "relative": true
             }
@@ -8698,8 +8667,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "fuseday/poc3-hello-world": 20,
-        "fuseday/torque": 20,
-        "fuseday/weld": 20
+        "fuseday/torque": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

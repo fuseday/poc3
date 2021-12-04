@@ -14,16 +14,15 @@
         },
         {
             "type": "path",
-            "url": "./packages/**",
+            "url": "./../torque",
             "symlink": true
         }
     ],
     "require": {
         "php": "^8.1",
         "fruitcake/laravel-cors": "^2.0",
-        "fuseday/poc3-hello-world": "dev-master",
+        "fuseday/poc3-hello-world": "dev-main",
         "fuseday/torque": "dev-main",
-        "fuseday/weld": "dev-main",
         "guzzlehttp/guzzle": "^7.0.1",
         "inertiajs/inertia-laravel": "^0.4.3",
         "laravel/framework": "^8.65",
