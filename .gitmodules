@@ -1,0 +1,3 @@
+[submodule "packages/torque"]
+	path = packages/torque
+	url = https://github.com/fuseday/torque

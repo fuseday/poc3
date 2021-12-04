@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29830c438476fdbbaffcb24caa408838",
+    "content-hash": "9e40056a88d132553fb72b44d3bda5c9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -675,11 +675,82 @@
             "time": "2021-04-26T11:24:25+00:00"
         },
         {
+            "name": "fuseday/torque",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/torque",
+                "reference": "580cd22ed4a01a864433e2fa368c1c620e5f4c03"
+            },
+            "require": {
+                "illuminate/support": "^8.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.17",
+                "phpunit/phpunit": "^9.5.4",
+                "spatie/laravel-ray": "^1.9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fuseday\\Torque\\TorqueServiceProvider"
+                    ],
+                    "aliases": {
+                        "Torque": "Fuseday\\Torque\\TorqueFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fuseday\\Torque\\": "src"
+                },
+                "files": [
+                    "helpers/helpers.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Fuseday\\Torque\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joao Patricio",
+                    "email": "ijpatricio@gmail.com"
+                }
+            ],
+            "description": "A library to make frontend communication with backend, amazingly easy.",
+            "homepage": "https://github.com/fuseday/torque",
+            "keywords": [
+                "full stak components",
+                "inertia",
+                "laravel",
+                "torque",
+                "vue"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "fuseday/weld",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "../poc-legos/weld",
+                "url": "./../poc-legos/weld",
                 "reference": "35cfc9a8d7f825bed30a19d8475713320f8f90a8"
             },
             "require": {
@@ -2291,16 +2362,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.55.1",
+            "version": "2.55.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "67f34dc7a8a97fcb9b26e60ec3819b856764d60f"
+                "reference": "8c2a18ce3e67c34efc1b29f64fe61304368259a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/67f34dc7a8a97fcb9b26e60ec3819b856764d60f",
-                "reference": "67f34dc7a8a97fcb9b26e60ec3819b856764d60f",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8c2a18ce3e67c34efc1b29f64fe61304368259a2",
+                "reference": "8c2a18ce3e67c34efc1b29f64fe61304368259a2",
                 "shasum": ""
             },
             "require": {
@@ -2383,7 +2454,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-12-03T13:47:17+00:00"
+            "time": "2021-12-03T14:59:52+00:00"
         },
         {
             "name": "nette/schema",
@@ -8595,6 +8666,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "fuseday/torque": 20,
         "fuseday/weld": 20
     },
     "prefer-stable": true,
