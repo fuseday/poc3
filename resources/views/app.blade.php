@@ -15,6 +15,10 @@
         <!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
+
+        @inject('torque', 'torque')
+        {!! $torque->renderComponents() !!}
+
     </head>
     <body class="font-sans antialiased">
         @inertia

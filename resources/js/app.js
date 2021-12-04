@@ -10,10 +10,16 @@ createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => require(`./Pages/${name}.vue`),
     setup({ el, app, props, plugin }) {
-        return createApp({ render: () => h(app, props) })
+        const vueApp = createApp({ render: () => h(app, props) })
             .use(plugin)
             .mixin({ methods: { route } })
-            .mount(el);
+            .mount(el)
+
+        // vueApp.config.globalProperties.window = window
+
+        console.log(vueApp);
+
+        return vueApp
     },
 });
 
