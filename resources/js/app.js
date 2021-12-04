@@ -8,20 +8,23 @@ const appName = window.document.getElementsByTagName('title')[0]?.innerText || '
 window.createInertiaApp=createInertiaApp
 window.createApp=createApp
 window.h=h
+window.globalComponentRegistrations = window.globalComponentRegistrations || [ 2 ]
+
 
 
 window.createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => require(`./Pages/${name}.vue`),
-    setup({ el, app, props, plugin }) {
-        const vueApp = window.createApp({ render: () => window.h(app, props) })
+    setup({ el, app: InertiaApp, props, plugin }) {
+        const app = window.createApp({ render: () => window.h(InertiaApp, props) })
             .use(plugin)
             .mixin({ methods: { route } })
-            .mount(el)
 
-        // vueApp.config.globalProperties.window = window
+        const { VButton, Greeter } = window.MyLib
+        app.component('v-button', VButton)
+        app.component('v-greeter', Greeter)
 
-        return vueApp
+        return app.mount(el)
     },
 });
 

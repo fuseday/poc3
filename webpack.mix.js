@@ -18,6 +18,15 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ])
     .webpackConfig(require('./webpack.config'))
+    .webpackConfig({
+        externals: {
+            vue: ['Vue']
+        },
+    })
+    .copy([
+        'node_modules/vue/dist/vue.global.js',
+        'node_modules/vue/dist/vue.global.prod.js',
+    ], 'public/js')
     .version()
     .sourceMaps()
 

@@ -11,6 +11,25 @@
                 you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel
                 ecosystem to be a breath of fresh air. We hope you love it.
             </div>
+
+            <div class="mt-6 text-gray-500">
+                <div>
+                    <v-button class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-green-500 hover:bg-green-700">
+                        My Button
+                    </v-button>
+                </div>
+                <div>
+                    <v-greeter v-slot="slot">
+                        <v-button
+                            class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-700"
+                            @click="slot.greet()"
+                        >
+                            Greet
+                        </v-button>
+                    </v-greeter>
+                </div>
+            </div>
+
         </div>
     </div>
 </template>

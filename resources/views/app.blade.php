@@ -19,8 +19,13 @@
     <body class="font-sans antialiased">
         @inertia
 
-{{--        @inject('torque', 'torque')--}}
-{{--        {!! $torque->renderComponents() !!}--}}
+        @production
+            <script src="/js/vue.min.js"></script>
+        @else
+            <script src="/js/vue.global.js"></script>
+        @endproduction
+
+        @inject('torque', 'torque') {!! $torque->renderComponents() !!}
 
         <script src="{{ mix('js/app.js') }}"></script>
     </body>

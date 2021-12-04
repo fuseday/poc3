@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e40056a88d132553fb72b44d3bda5c9",
+    "content-hash": "59bdfa45dbf78c439cea1b1ebcfa70e3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -673,6 +673,37 @@
                 }
             ],
             "time": "2021-04-26T11:24:25+00:00"
+        },
+        {
+            "name": "fuseday/poc3-hello-world",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./../poc-legos/poc3-hello-world",
+                "reference": "e35d1c4d412cc5866791d3a9cad2db768a4a8f12"
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.23"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fuseday\\Poc3HelloWorld\\Poc3HelloWorldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fuseday\\Poc3HelloWorld\\": "app/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "fuseday/torque",
@@ -8666,6 +8697,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "fuseday/poc3-hello-world": 20,
         "fuseday/torque": 20,
         "fuseday/weld": 20
     },
